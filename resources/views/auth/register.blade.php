@@ -29,7 +29,13 @@
                <div class="col-xxl-5 col-xl-6 col-lg-6">
                   <div class="tp-sign-up-wrapper">
                      <div class="tp-contact-wrap">
-                        <h4 class="tp-section-title mb-25">Créer votre compte chez JKL-CONSULTING</h4>
+                        <style>
+                            h6 {
+  font-size: 24pt; /* Taille du titre de 24 points */
+}
+                        </style>
+                        <h6 class="tp-sectione mb-25" style="front-size :12">Créer votre compte chez JKL-CONSULTING</h6>
+                        <br><br>
                         @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
