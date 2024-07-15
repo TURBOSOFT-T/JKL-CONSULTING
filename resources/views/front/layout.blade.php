@@ -246,8 +246,8 @@
          <div class="row">
             <div class="col-xl-5 col-lg-6">
                <div class="tp-service-title-box mb-55">
-                  <span class="tp-section-subtitle">Nos produits</span>
-                  <h4 class="tp-section-title">Nous fournissons une large gamme de produits</h4>
+                  <span class="tp-section-subtitle">les  dernières publications</span>
+                  
                </div>
             </div>
          </div>
