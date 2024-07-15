@@ -1,6 +1,7 @@
 {{-- @include('sweetalert::alert')
  --}}@php
     $config = DB::table('configs')->first();
+    $configs = DB::table('configs')->first();
     $service =DB::table('services')->get();
 @endphp
 <!doctype html>
@@ -9,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-     @yield('titre') - JKL CONSULTING 
+    <title> @yield('titre') - JKL CONSULTING </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -296,7 +297,7 @@
                                     </li>
                                     <li><a href="#">Activités</a></li>
                                     <li><a href="#">A propos </a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{{ route('contacts.create') }}">Contact</a></li>
                                     @guest
 
 

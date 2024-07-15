@@ -56,7 +56,8 @@ Route::prefix('posts')->group(function () {
 Route::name('front.comments.destroy')->delete('comments/{comment}', [FrontCommentController::class, 'destroy']);
 
 // Contact
-Route::resource('contacts', FrontContactController::class, ['only' => ['create', 'store']]);
+Route::resource('contacts', FrontContactController::class, ['only' => ['create', 'store', 'contact']]);
+Route::resource('contact', FrontContactController::class);
 
 // Shoppings
 Route::resource('shoppings', ShopController::class);
