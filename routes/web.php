@@ -5,7 +5,7 @@ use UniSharp\LaravelFilemanager\Lfm;
 use App\Http\Controllers\Front\{
     PostController as FrontPostController,
     CommentController as FrontCommentController,
-    ContactController as FrontContactController,
+    ContactController ,
     PageController as FrontPageController,
     InfosController,
     NewsController,
@@ -56,8 +56,9 @@ Route::prefix('posts')->group(function () {
 Route::name('front.comments.destroy')->delete('comments/{comment}', [FrontCommentController::class, 'destroy']);
 
 // Contact
-Route::resource('contacts', FrontContactController::class, ['only' => ['create', 'store', 'contact']]);
-Route::resource('contact', FrontContactController::class);
+Route::resource('contacts', ContactController::class, ['only' => ['create', 'store', 'contact','about']]);
+Route::resource('contact', ContactController::class);
+Route:: get('about', [ContactController::class, 'about'])->name('about');
 
 // Shoppings
 Route::resource('shoppings', ShopController::class);

@@ -521,7 +521,7 @@
                            </div>
                            <div class="tp-choose-content">
                               <h5 class="tp-choose-title">Produits Variés </h5>
-                              <p>Pour agricultures, et passionnés de jardinage.</p>
+                              {{-- <p>Pour agricultures, et passionnés de jardinage.</p> --}}
                            </div>
                         </div>
                         <div class="tp-choose-box d-flex align-items-start">
@@ -545,7 +545,7 @@
                            </div>
                            <div class="tp-choose-content">
                               <h5 class="tp-choose-title">Conseils d'Experts</h5>
-                              <p>Équipe disponible pour vous guider.</p>
+                              <p> Du texte.</p>
                            </div>
                         </div>
                         <div class="tp-choose-box d-flex align-items-start">
@@ -640,18 +640,14 @@
                            <h2 class="accordion-header" id="headingOne">
                               <button class="accordion-buttons " type="button" data-bs-toggle="collapse"
                                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                 Quels types de matériel de jardinage proposez-vous ?
+                                question ?
                               </button>
                            </h2>
                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                               data-bs-parent="#accordionExample">
                               <div class="accordion-body">
                                  <p style="color:white">
-                                    Nous proposons une large gamme de matériel de jardinage, y compris des outils
-                                    manuels tels que des pelles, des râteaux et des sécateurs, des équipements
-                                    électriques comme des tondeuses à gazon et des taille-haies, ainsi que des produits
-                                    de jardinage spécialisés tels que des systèmes d'irrigation, des serres et des
-                                    engrais.
+                                   paragraphe
                                  </p>
                               </div>
                            </div>
@@ -666,9 +662,7 @@
                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                               data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                 <p style="color:white">Oui, nous livrons dans toute la Tunisie. Les frais de livraison
-                                    varient en fonction de votre emplacement et du poids de votre commande. Nous nous
-                                    efforçons de garantir une livraison rapide et sûre de tous nos produits.</p>
+                                 <p style="color:white">  textex ...........</p>
                               </div>
                            </div>
                         </div>
@@ -682,9 +676,7 @@
                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                               data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                 <p style="color:white">Si vous n'êtes pas satisfait de votre achat, vous pouvez
-                                    retourner les articles dans un délai de 2 jours après la réception de votre
-                                    commande. Les produits doivent être dans leur état d'origine.</p>
+                                 <p style="color:white">Tesxtes............</p>
                               </div>
                            </div>
                         </div>
@@ -697,6 +689,7 @@
                   <h4 class="tp-contact-title">Créer un compte</h4>
                   <span>Prendre rendez-vous</span>
                 {{--   @livewire('Front.Register') --}}
+                Form
                </div>
             </div>
          </div>

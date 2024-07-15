@@ -24,7 +24,9 @@ class ContactController extends Controller
     {
         return view('front.contact.contact');
     }
-
+ public function about(){
+    return view('front.about.about');
+ }
     /**
      * Store a newly created resource in storage.
      *
