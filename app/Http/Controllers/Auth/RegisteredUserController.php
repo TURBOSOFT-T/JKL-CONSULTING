@@ -8,8 +8,10 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+
 use Illuminate\Http\RedirectResponse;
+
+use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
@@ -21,20 +23,36 @@ class RegisteredUserController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create()
+    public function create(): View
     {
         return view('auth.register');
     }
 
-    public function store(Request $request)
+
+
+
+    public function store(Request $request) : RedirectResponse
     {
-        $request->validate([
+        $request->validate( [
 
             'last_name' => ['required', 'string', 'max:255'],
             'first_name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+       ],[
+            'last_name.required' => 'Le champ nom de famille est obligatoire.',
+            'first_name.required' => 'Le champ prénom est obligatoire.',
+            'email.required' => 'Le champ email est obligatoire.',
+            'email.email' => 'Veuillez entrer une adresse email valide.',
+            'email.unique' => 'Cet email est déjà pris.',
+            'password.required' => 'Le champ mot de passe est obligatoire.',
+            'password.min' => 'Votre mot de passe doit contenir au moins 8 caractères.....',
+            'password.confirmed' => 'Les mots de passe ne correspondent pas.',
+        ]); 
+
+        if ($request-> fails()) {
+            return redirect()->back()->with(['error' => $request->errors()]);
+        }
 
         $personal_info = new User();
 

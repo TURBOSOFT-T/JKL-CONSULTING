@@ -309,7 +309,7 @@
                                         </li>
                                     @else
                                        
-                                        @if (auth()->user()->role != 'client')
+                                        @if (auth()->user()->role != 'user')
                                             <li><a href="{{ url('admin') }}" class="nav-item nav-link">Administration</a>
                                             </li>
                                         @endif
@@ -416,9 +416,9 @@
 
 
     </main>
-
+   
     <footer>
-        <div class="tp-footer-bg tp-footer-overley" data-background="/icons/footer-bg-1.jpg">
+        <div class="tp-footer-bg tp-footer-overley" data-background="/assets/logo/logo_about.jpg">
             <!-- footer area start -->
             <div class="tp-footer-area tp-footer-border pt-80 pb-10">
                 <div class="container">
@@ -563,7 +563,7 @@
                             <div class="tp-copyright-text text-center">
                                 <p class="text-white">
                                     Copyright @ 2024 JKL CONSULTING.   Build by
-                                    <a href="#" style="color: #c71f17;">
+                                    <a href="#" style="color: #1723c7;">
                                         <b> TURBOSOFT </b>
                                     </a> .
                                 </p>

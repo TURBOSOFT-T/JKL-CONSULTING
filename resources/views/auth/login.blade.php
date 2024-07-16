@@ -11,7 +11,7 @@
                     <div class="col-xxl-7 col-xl-6 col-lg-6">
                         <div class="tp-login-left">
                             <div class="tp-login-thumb">
-                                <img src="assets/img/login/thumb-1.png" alt="">
+                                <img src="/assets/logo/login.jpg"  style="height : 200; height :200 " alt="preloader">
                             </div>
                         </div>
                     </div>  
@@ -20,7 +20,7 @@
                         <div class="tp-sign-up-wrapper">
                             <div class="tp-contact-wrap">
                                 <h4 class="tp-section-title mb-25">Se connecter</h4>
-                               <!-- Affichage des messages de succès -->
+     {{--                           <!-- Affichage des messages de succès -->
         @if (session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
@@ -43,8 +43,20 @@
                 @endforeach
             </ul>
         </div>
-    @endif
-                              
+    @endif --}}
+                               <!-- Session Status -->
+                            <x-auth.session-status :status="session('status')" />
+                            <!-- Validation Errors -->
+                            <x-auth.validation-errors :errors="$errors" />
+
+                            @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {{ Session::get('success') }}
+                                @php
+                                Session::forget('success');
+                                @endphp
+                            </div>
+                            @endif
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <div class="row gx-30">
