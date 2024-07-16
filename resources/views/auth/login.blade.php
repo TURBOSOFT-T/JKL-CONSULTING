@@ -1,5 +1,5 @@
 @extends('front.fixe')
-@section('titre','Accueil')
+@section('titre','Login')
 @section('body')
 <main>
 {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
@@ -14,18 +14,44 @@
                                 <img src="assets/img/login/thumb-1.png" alt="">
                             </div>
                         </div>
-                    </div>
+                    </div>  
+               
                     <div class="col-xxl-5 col-xl-6 col-lg-6">
                         <div class="tp-sign-up-wrapper">
                             <div class="tp-contact-wrap">
                                 <h4 class="tp-section-title mb-25">Se connecter</h4>
+                               <!-- Affichage des messages de succès -->
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    <!-- Affichage des messages d'erreur -->
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+
+    <!-- Affichage des erreurs de validation -->
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+                              
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <div class="row gx-30">
                                         <div class="col-12 mb-20">
                                             <div class="tp-contact-input-box p-relative">
-                                                <input type="email" class="form-control" id="user_login_email"
-                                                    name="email" placeholder="Email Address" />
+                                                <input type="email" class="form-control" id="email"
+                                                    name="email" placeholder="Email Address" required />
                                                 <span class="tp-contact-icon">
                                                     <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -41,8 +67,8 @@
                                         </div>
                                         <div class="col-md-12 mb-20">
                                             <div class="tp-contact-input-box p-relative">
-                                                <input type="password" class="form-control" id="user_login_password"
-                                                    placeholder="Password" name="password" />
+                                                <input type="password" class="form-control" id="password"
+                                                    placeholder="Password" name="password" required />
                                                 <span class="tp-contact-icon">
                                                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
