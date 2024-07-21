@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
     {
         setlocale(LC_TIME, config('app.locale'));
 
-        View::composer(['front.layout', 'front.index'], HomeComposer::class);
+        View::composer(['front.layout', 'front.index','front.fixe', 'front.blogs.details'], HomeComposer::class);
 
         View::composer('back.layout', function ($view) {
             $title = config('titles.' . Route::currentRouteName());
@@ -43,8 +43,8 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer(['front.layout', 'detailsproducts.show', 'products.show'], function ($view) {
             $view->with([
-                'cartCount' => Cart::getTotalQuantity(),
-                'cartTotal' => Cart::getTotal(),
+                //'cartCount' => Cart::getTotalQuantity(),
+               // 'cartTotal' => Cart::getTotal(),
             ]);
         });
     }

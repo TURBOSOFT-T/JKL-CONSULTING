@@ -29,6 +29,7 @@ use App\Http\Controllers\Back\{
 };
 
 use App\Http\Controllers\Auth\CustomAuthController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CartController;
 
 /* Route::group(['prefix' => 'laravel-filemanager', 'middleware' => 'auth'], function () {
@@ -49,7 +50,12 @@ Route::prefix('posts')->group(function () {
     Route::name('posts.search')->get('', [FrontPostController::class, 'search']);
     Route::name('posts.comments')->get('{post}/comments', [FrontCommentController::class, 'comments']);
     Route::name('posts.comments.store')->post('{post}/comments', [FrontCommentController::class, 'store'])->middleware('auth');
+
+
 });
+Route::get('/blog', [FrontPostController::class, 'blog']);
+Route::get('details-blog/{id}', [FrontPostController::class, 'details'])->name('details-blog');
+Route::get('/category/{id}', [FrontPostController::class, 'posts'])->where('id', '[0-9]+');
 Route::name('front.comments.destroy')->delete('comments/{comment}', [FrontCommentController::class, 'destroy']);
 
 // Contact
@@ -177,3 +183,7 @@ Route::middleware('ajax')->group(function () {
 });
 // Home page
 //Route::view('/', 'home')->name('home');
+
+
+Route::post('/register', [LoginController::class, 'store'])
+                ->middleware('guest');

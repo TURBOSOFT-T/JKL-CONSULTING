@@ -296,7 +296,8 @@
 
                                     </li>
                                     <li><a href="#">Activités</a></li>
-                                    <li><a href="{{ url('about') }}">A propos </a></li>
+                                   {{--  <li><a href="{{ url('about') }}">A propos </a></li> --}}
+                                   <li><a href="{{ url('blog') }}">Blogs </a></li>
                                     <li><a href="{{ route('contacts.create') }}">Contact</a></li>
                                     @guest
 

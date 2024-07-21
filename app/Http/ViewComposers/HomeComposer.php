@@ -3,7 +3,7 @@
 namespace App\Http\ViewComposers;
 
 use Illuminate\View\View;
-use App\Models\{Category, Page, Follow, Home, Project, Service};
+use App\Models\{Category, Page, Follow, Home, Project, Service, Post};
 use Cart;
 
 class HomeComposer
@@ -23,8 +23,9 @@ class HomeComposer
             'homes' => Home::all(),
             'services'=>Service::all(),
             'project'=>Project::all(),
-            'cartCount' => Cart::getTotalQuantity(),
-            'cartTotal' => Cart::getTotal(),
+            'posts'=>Post::select('*')->take('8')->get(),
+           // 'cartCount' => Cart::getTotalQuantity(),
+          //  'cartTotal' => Cart::getTotal(),
             
         ]);
     }
