@@ -494,7 +494,7 @@
    <!-- choose area start -->
    <div class="tp-choose-area tp-choose-ptb fix p-relative">
       <div class="tp-choose-shape-1 d-none d-lg-block">
-         <img src="assets/img/shape/choose/shape-1-1.png" alt="">
+         <img  src="{{ url('public/Image/Parametres/' . $config->logo) }}" width="400" height="400" alt="logo footer">
       </div>
       <div class="container">
          <div class="row">
@@ -566,7 +566,7 @@
          </div>
       </div>
       <div class="tp-choose-thumb">
-         <img src="/assets/logo/logo_about.jpg" width="600 " height="600 " {{-- class="rounded shadow" --}}alt="">
+         <img  src="{{ url('public/Image/Parametres/' . $config->logo) }}" width="400" height="400" alt="logo footer">
       </div>
    </div>
    <!-- choose area end -->
@@ -758,7 +758,7 @@
     <!-- contact area start -->
     <div class="tp-contact-area tp-contact-2-style-2 tp-contact-style-3 theme-bg-2 p-relative">
       <div class="tp-contact-shape-1 d-none d-xl-block">
-         <img src="assets/img/shape/blog/shape-4-1.png" alt="">
+         <img  src="{{ url('public/Image/Parametres/' . $config->logo) }}" width="500" height="500" alt="logo footer">
       </div>
       <div class="container">
          <div class="row align-items-center">
