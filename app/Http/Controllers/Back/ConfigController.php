@@ -15,11 +15,11 @@ use App\Http\Requests\UpdateConfigRequest;
 
 class ConfigController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $configs = config::first();
@@ -39,71 +39,29 @@ class ConfigController extends Controller
     
 
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreConfigRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function storef(StoreConfigRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Config $config)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Config  $config
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Config $config)
     {
-        //
+        $config= config::first();
+       // dd($config);
+       //dd($config->description);
+        return view('back.config.edit' , compact('config'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateConfigRequest  $request
-     * @param  \App\Models\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function store(UpdateConfigRequest $request, Config $config)
+    public function update(UpdateConfigRequest $request, Config $config)
     {
       //  $user = Auth::user();
 
 
         $input = $request->all();
         $config = config::first();
-        dd($config);
+       // dd($config->description);
 
         if ($request->hasFile('image')) {
 
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('public/Image/logos/', $filename);
+            $file->move('public/Image/Parametres/', $filename);
             $input['image'] = $filename;
         }
 
@@ -113,7 +71,7 @@ class ConfigController extends Controller
             $file = $request->file('logo');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('public/Image/logos/', $filename);
+            $file->move('public/Image/Parametres/', $filename);
             $input['logo'] = $filename;
         }
         if ($request->hasFile('icon')) {
@@ -121,12 +79,12 @@ class ConfigController extends Controller
             $file = $request->file('icon');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('public/Image/logos/', $filename);
+            $file->move('public/Image/Parametres/', $filename);
             $input['icon'] = $filename;
         }
 
                  $config->update($input);
-      //  $user->products()->create($input);
+      
 
         return redirect()->back()->with('success', 'Updated successfully!');
     }

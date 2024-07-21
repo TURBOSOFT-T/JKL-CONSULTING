@@ -169,9 +169,7 @@ Route::prefix('admin')->group(function () {
        // Route::resource('services', BackResourceController::class)->except(['show']);
         Route::resource('services', ServiceController::class);
 
-        
-   /*  Route::get('contact-admin', [BackConfigController::class, 'contact_admin'])
-    ->name('contact-admin'); */
+       
              Route::resource('contactadmins', ConfigController::class);
   
 

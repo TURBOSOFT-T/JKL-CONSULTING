@@ -37,7 +37,7 @@
                         <th>Logo</th>
                 
                         <th>Email</th>
-                        <th>Frais de transport</th>
+                       {{--  <th>Frais de transport</th> --}}
                         <th>Téléphone</th>
                         <th>Adresse</th>
                         <th>Description</th>
@@ -47,29 +47,18 @@
                    
                     <tr>
                 
-                        
-                        <td>{{ $config->icon }}</td>
+                        <td> <img class="card-img-top product-image" width="50" height="50"  src="{{ url('public/Image/Parametres/' . $config->icon) }}"></td>
                       
-                        <td>{{ $config->logo }}</td>
+                        <td> <img class="card-img-top product-image" width="50" height="50"  src="{{ url('public/Image/Parametres/' . $config->logo) }}"></td>
                         <td>{{ $config->email }}</td>
-                        <td>{{ $config->frais }}</td>
+                      {{--   <td>{{ $config->frais }}</td> --}}
                         <td>{{ $config->telephone }}</td>
                         <td>{{ $config->addresse }}</td>
                         <td>{{ $config->description }}</td>
-                        
-                       {{--  <td>
-                           
-                            <a class="btn btn-info" href="{{ route('products.show',$produit->id) }}">Show</a>
-                            <a class="btn btn-primary" href="{{ route('products.edit',$produit->id) }}">Edit</a>
-                            {!! Form::open(['method' => 'DELETE','route' => ['products.destroy',
-                            $produit->id],'style'=>'display:inline']) !!}
-                            @csrf
-                            <input name="_method" type="hidden" value="DELETE">
-                            <button type="submit" class="btn btn-outline-danger btn-flat show_confirm" data-toggle="tooltip"
-                                title='Delete'>Delete</button>
-                
-                            {!! Form::close() !!}
-                        </td> --}}
+                        <td>
+                            <a class="btn btn-primary" href="{{ route('contactadmins.edit',$config->id) }}">Modifier</a>
+                        </td>
+                    
                     </tr>
                    
                 </table>

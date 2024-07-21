@@ -21,8 +21,8 @@
         <meta name="keywords" content="{{ $post->meta_keywords }}">
     @endif
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/logo/logo.jpg"> 
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('public/Image/Parametres/' . $config->icon) }}"> 
+   {{--  <img class="card-img-top product-image" src="{{ url('public/Image/Parametres/' . $config->logo) }}"> --}}
     <!-- CSS here -->
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/animate.css">
@@ -429,7 +429,7 @@
                             <div class="tp-footer-widget footer-col-1">
                                 <div class="tp-footer-logo">
                                     <a href="{{ route('home') }}">
-                                        <img  src="/assets/logo/logo_about.jpg" width="100" height="100" alt="logo footer">
+                                        <img  src="{{ url('public/Image/Parametres/' . $config->logo) }}" width="100" height="100" alt="logo footer">
                                     </a>
                                 </div>
                                 <div class="tp-footer-text">
