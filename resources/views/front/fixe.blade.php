@@ -432,8 +432,13 @@
                                         <img  src="{{ url('public/Image/Parametres/' . $config->logo) }}" width="100" height="100" alt="logo footer">
                                     </a>
                                 </div>
+                                <style>
+                                    .text-justify {
+    text-align: justify;
+}
+                                </style>
                                 <div class="tp-footer-text">
-                                     <p>{{ $config->description }}</p> 
+                                     <p class="text-justify">{{ $config->description }}</p> 
                                 </div>
                                 <div class="tp-footer-social">
                                     {{-- <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -451,11 +456,11 @@
                                 <div class="tp-footer-widget-list">
                                    
                                     <ul>
-{{-- 
+
                                         @foreach ($services as $service )
                                         <li><a href="#">{{$service->nom}}</a></li>
                                         
-                                        @endforeach --}}
+                                        @endforeach 
                                         {{-- <li><a href="#">Gardening</a></li>
                                         <li><a href="#">Lawn</a></li>
                                         <li><a href="#">Management</a></li>
