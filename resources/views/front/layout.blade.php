@@ -8,59 +8,7 @@
     $service =DB::table('services')->get();
 @endphp
    <!-- slider area start -->
-   <div class="tp-slider-area">
-      <div class="tp-slider-wrapper p-relative">
-         <div class="swiper-container tp-slider-active">
-            <div class="swiper-wrapper">
-                 @foreach ($homes as $banner)  
-               <div class="swiper-slide">
-                  <div class="tp-slider-height tp-slider-overley p-relative">
-                     <div class="tp-slider-box">
-                         <div class="tp-slider-bg" data-background="{{ Storage::url($banner->image) }}"></div> 
-                         <img class="w-100" {{-- src="/images/{{ $home->image }}" --}} src="{{ asset($banner->getPath()) }}" alt="Image">
-                        <div class="container">
-                           <div class="row justify-content-center">
-                              <div class="col-xxxl-8 col-xxl-7 col-xl-7 col-lg-8 col-md-10">
-                                 <div class="tp-slider-content text-center z-index">
-                                    <div class="tp-slider-title">
-                                       <div>
-                                          <span>
-                                              {{ $banner->title ?? ""}} 
-                                          </span>
-                                       </div>
-                                    </div>
-                                    <div class="tp-slider-text">
-                                       <div>
-                                          <p>
-                                            {{--  {{ $banner->sous_titre ?? ""}} --}}
-                                          </p>
-                                       </div>
-                                    </div>
-                                    <div class="tp-slider-button">
-                                       <div class="tp-slider-button-wrapper">
-                                          <a class="tp-btn-yellow mr-25" href="#">
-                                             <span>Contact</span>
-                                          </a>
-                                          <a class="tp-btn-theme" href="#">
-                                             <span>Vois les articles</span>
-                                          </a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-                @endforeach  
-            </div>
-         </div>
-      </div>
 
-
-   </div>
-   
    <div class="container-fluid px-0 mb-5">
       <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
   
