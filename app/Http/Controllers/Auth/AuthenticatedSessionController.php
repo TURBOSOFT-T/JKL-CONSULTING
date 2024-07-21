@@ -78,7 +78,7 @@ class AuthenticatedSessionController extends Controller
     ]);
   
     if (Auth::attempt($credentials)) {
-        return redirect()->intended('dashboard')
+        return redirect()->intended('/home')
                      ->with('success', 'Vous vous êtes connecté avec succès');
 
     }
