@@ -450,8 +450,7 @@
                <div class="tp-choose-left">
                   <div class="tp-choose-title-box mb-20">
                      <span class="tp-section-subtitle">A propos de nous</span>
-                     <h4 class="tp-section-title">Ajoutez plus de vert à
-                        votre vie avec JKL CONSULTING !
+                     <h4 class="tp-section-title">Transformez vos défis en opportunités avec JKL CONSULTING
 
                      </h4>
                   </div>
@@ -468,8 +467,11 @@
                               </span>
                            </div>
                            <div class="tp-choose-content">
-                              <h5 class="tp-choose-title">Produits Variés </h5>
-                              {{-- <p>Pour agricultures, et passionnés de jardinage.</p> --}}
+                              <h5 class="tp-choose-title">Notre Mission </h5>
+                              <p>Chez JKL CONSULTING, nous nous engageons à connecter
+                                 l’expertise et les opportunités à travers divers secteurs, offrant des solutions innovantes et
+                                 personnalisées pour répondre aux besoins uniques de chaque client.
+                                 </p> 
                            </div>
                         </div>
                         <div class="tp-choose-box d-flex align-items-start">
@@ -479,8 +481,11 @@
                               </span>
                            </div>
                            <div class="tp-choose-content">
-                              <h5 class="tp-choose-title">Large Gamme </h5>
-                              <p>Articles diversifiés pour tous vos besoins.</p>
+                              <h5 class="tp-choose-title">Nos Domaines d’Intervention</h5>
+                              <p>Nous couvrons cinq secteurs principaux : les
+                                 études, les produits industriels, la médecine, l’informatique, et la conception électronique et
+                                 mécanique. Cette diversité nous permet de fournir des services de consulting de haute
+                                 qualité adaptés à un large éventail d’exigences.</p>
                            </div>
                         </div>
                      </div>
@@ -492,8 +497,10 @@
                               </span>
                            </div>
                            <div class="tp-choose-content">
-                              <h5 class="tp-choose-title">Conseils d'Experts</h5>
-                              <p> Du texte.</p>
+                              <h5 class="tp-choose-title">Nos Valeurs</h5>
+                              <p> : Nous valorisons l’excellence, l’innovation et l’intégrité. Notre
+                                 objectif est de construire des relations durables basées sur la confiance et le succès mutuel,
+                                 en veillant à ce que chaque projet soit exécuté avec le plus grand soin et professionnalisme.</p>
                            </div>
                         </div>
                         <div class="tp-choose-box d-flex align-items-start">
@@ -503,8 +510,11 @@
                               </span>
                            </div>
                            <div class="tp-choose-content">
-                              <h5 class="tp-choose-title">Satisfaction Garantie</h5>
-                              <p>Choisissez JKL CONSULTING pour votre plaisir et satisfaction.</p>
+                              <h5 class="tp-choose-title">Notre Équipe</h5>
+                              <p> Composée de professionnels expérimentés et passionnés,
+                                 notre équipe est dédiée à fournir des solutions stratégiques et opérationnelles. Avec une
+                                 expertise approfondie dans leurs domaines respectifs, nos consultants travaillent en étroite
+                                 collaboration avec nos clients pour atteindre leurs objectifs ambitieux</p>
                            </div>
                         </div>
                      </div>
@@ -526,13 +536,14 @@
                <div class="col-xl-5 col-lg-6">  
                   <div class="tp-choose-left">
                      <div class="tp-choose-title-box mb-20">
-                        <span class="tp-section-subtitle">Why Choose Us</span>
-                        <h4 class="tp-section-title">We Are Professional
-                           Garden Care</h4>
+                        <span class="tp-section-subtitle">Pouquoi nous choisir?</span>
+                        <h4 class="tp-section-title">Notre professionnalisme
+                          </h4>
                      </div>
                      <div class="tp-choose-text">
-                        <p>On the other hand, we denounce with right out care the men who are so beguiled and
-                           demoralized by the charms of care pleasure of the garden services</p>
+                        <p>? Parce que nous nous engageons à transformer vos
+                           défis en opportunités grâce à notre mission clairement définie, notre vision ambitieuse et nos
+                           archives impressionnantes.</p>
                      </div>
                      <div class="tp-choose-box d-flex align-items-start">
                         <div class="tp-choose-icon">
@@ -541,9 +552,13 @@
                            </span>
                         </div>
                         <div class="tp-choose-content">
-                           <h5 class="tp-choose-title">Our Mission</h5>
-                           <p>Objectively redefine the box for architect the garden
-                              sound time synergy the with
+                           <h5 class="tp-choose-title">Notre  Mission</h5>
+                           <p> Chez JKL CONSULTING, notre mission est de connecter
+                              l’expertise et les opportunités pour créer des solutions innovantes et durables. Nous nous
+                              engageons à offrir des services de consulting de premier ordre qui répondent aux besoins
+                              uniques de nos clients à travers divers secteurs, assurant ainsi leur succès et leur
+                              croissance.
+                              
                            </p>
                         </div>
                      </div>
@@ -554,12 +569,17 @@
                            </span>
                         </div>
                         <div class="tp-choose-content">
-                           <h5 class="tp-choose-title">Our Vision</h5>
-                           <p>Objectively redefine the box for architect the garden
-                              sound time synergy the with
-                           </p>
+                           <h5 class="tp-choose-title">Notre Vision</h5>
+                           <p>Nous aspirons à être le partenaire de confiance privilégié des
+                              entreprises à la recherche d’excellence et d’innovation. En mettant l’accent sur la
+                              collaboration et le développement continu, nous visons à transformer les défis en
+                              opportunités et à faire émerger des solutions qui contribuent à un avenir prospère pour nos
+                              clients et partenaires </p>
                         </div>
+
+                        
                      </div>
+                     
                      <div class="tp-choose-box d-flex align-items-start">
                         <div class="tp-choose-icon">
                            <span>
@@ -567,9 +587,10 @@
                            </span>
                         </div>
                         <div class="tp-choose-content">
-                           <h5 class="tp-choose-title">Our Achievement</h5>
-                           <p>Objectively redefine the box for architect the garden
-                              sound time synergy the with
+                           <h5 class="tp-choose-title">Nos Valeurs </h5>
+                           <p> Nous valorisons l’excellence, l’innovation et l’intégrité. Notre
+                              objectif est de construire des relations durables basées sur la confiance et le succès mutuel,
+                              en veillant à ce que chaque projet soit exécuté avec le plus grand soin et professionnalisme.
                            </p>
                         </div>
                      </div>
@@ -713,13 +734,14 @@
             <div class="col-xl-5 col-lg-6">
                <div class="tp-contact-3-left">
                   <div class="tp-contact-3-title-box mb-20">
-                     <span class="tp-section-subtitle">Contact Us</span>
-                     <h4 class="tp-section-title">Let’s Work & Create
-                        Account</h4>
+                     <span class="tp-section-subtitle">Nous contactez</span>
+                     <h4 class="tp-section-title"></h4>
                   </div>
                   <div class="tp-contact-3-text mb-25">
-                     <p>On the other hand, we denounce with right out care the <br> men who are so garden services
-                     </p>
+                     <p> Notre mission est de connecter l’expertise et les opportunités,
+                        offrant des solutions sur mesure qui répondent aux besoins uniques de chaque client. Notre
+                        vision est de devenir votre partenaire de confiance en matière d’excellence et d’innovation,
+                        en transformant les défis en opportunités pour un avenir prospère.  </p>
                   </div>
                   <div class="tp-contact-2-box p-relative mb-25">
                      <div class="tp-contact-2-icon">
@@ -778,13 +800,13 @@
             </div>
             <div class="col-xl-5 col-lg-6">
                <div class="tp-contact-wrap">
-                  <h4 class="tp-contact-title">Request An Estimate</h4>
-                  <span>Make An Appointment</span>
+                  <h4 class="tp-contact-title"></h4>
+                  <span>Laissez un message pour un éventuel rendez-vous</span>
                   <form action="#">
                      <div class="row gx-30">
                         <div class="col-md-6 mb-20">
                            <div class="tp-contact-input-box p-relative">
-                              <input type="text" placeholder="Name">
+                              <input type="text" placeholder="Nom">
                               <span class="tp-contact-icon">
                                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -797,7 +819,7 @@
                         </div>
                         <div class="col-md-6 mb-20">
                            <div class="tp-contact-input-box p-relative">
-                              <input type="text" placeholder="Phone Number">
+                              <input type="text" placeholder="votre numéro">
                               <span class="tp-contact-icon">
                                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -810,7 +832,7 @@
                         </div>
                         <div class="col-md-12 mb-20">
                            <div class="tp-contact-input-box p-relative">
-                              <input type="email" placeholder="Email Id">
+                              <input type="email" placeholder="Email ">
                               <span class="tp-contact-icon">
                                  <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -823,7 +845,7 @@
                         </div>
                         <div class="col-md-12 mb-20">
                            <div class="tp-contact-input-box p-relative">
-                              <input type="text" placeholder="Subject">
+                              <input type="text" placeholder="Sujet">
                               <span class="tp-contact-icon">
                                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -842,7 +864,7 @@
                         </div>
                         <div class="col-md-12 mb-50">
                            <div class="tp-contact-input-box p-relative">
-                              <input type="text" placeholder="Your Comment">
+                              <input type="text" placeholder="Votre message">
                               <span class="tp-contact-icon">
                                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -854,7 +876,7 @@
                            </div>
                         </div>
                      </div>
-                     <button class="tp-btn-theme" type="submit"><span>Request A Quote</span></button>
+                     <button class="tp-btn-theme" type="submit"><span>Laissez un message</span></button>
                   </form>
                </div>
             </div>
