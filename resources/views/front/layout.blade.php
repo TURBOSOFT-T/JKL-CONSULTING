@@ -498,7 +498,7 @@
                            </div>
                            <div class="tp-choose-content">
                               <h5 class="tp-choose-title">Nos Valeurs</h5>
-                              <p> : Nous valorisons l’excellence, l’innovation et l’intégrité. Notre
+                              <p> Nous valorisons l’excellence, l’innovation et l’intégrité. Notre
                                  objectif est de construire des relations durables basées sur la confiance et le succès mutuel,
                                  en veillant à ce que chaque projet soit exécuté avec le plus grand soin et professionnalisme.</p>
                            </div>
@@ -541,7 +541,7 @@
                           </h4>
                      </div>
                      <div class="tp-choose-text">
-                        <p>? Parce que nous nous engageons à transformer vos
+                        <p> Parce que nous nous engageons à transformer vos
                            défis en opportunités grâce à notre mission clairement définie, notre vision ambitieuse et nos
                            archives impressionnantes.</p>
                      </div>
