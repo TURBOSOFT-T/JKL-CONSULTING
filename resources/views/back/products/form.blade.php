@@ -129,12 +129,7 @@
                                 </div>
                             </div>
 
-                            <x-back.input title='Original Pricc' name='originalPrice' :value="isset($product) ? $product->originalPrice : ''" input='number'
-                                :required="true">
-                            </x-back.input>
-                            <x-back.input title='Discount Price' name='discountPrice' :value="isset($product) ? $product->discountPrice : ''"
-                                input='number' :required="true">
-                            </x-back.input>
+                         
 
 
 

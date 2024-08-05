@@ -76,8 +76,14 @@
 
                               
 
-                               <x-back.input rows="4" cols="50" title='Body' name='body' :value="isset($home) ? $home->body : ''"  input='text' :required="true">
-                               </x-back.input>
+                              {{--  <x-back.input rows="4" cols="50" title='Body' name='body' :value="isset($home) ? $home->body : ''"  input='text' :required="true">
+                               </x-back.input> --}}
+                               <x-back.card type='primary' title='Description'>
+                                <x-back.input name='body'
+                                    :value="isset($hom) ? $home->body : ''" input='textarea' rows=5
+                                    :required="true">
+                                </x-back.input>
+                            </x-back.card>
                             </x-back.card>
 
 
