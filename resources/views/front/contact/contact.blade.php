@@ -37,7 +37,7 @@ $configs = DB::table('configs')->first();
                                     </span>
                                 </div>
                                 <div class="tp-contact-2-text my-auto">
-                                    <b>{{ $configs->telephone ?? '-' }} </b>
+                                    <b>{{ $config->telephone ?? '' }} </b>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ $configs = DB::table('configs')->first();
                                     </span>
                                 </div>
                                 <div class="tp-contact-2-text my-auto small">
-                                        <b>{{ $configs->email ?? '-' }}</b>
+                                        <b>{{ $config->email ?? '-' }}</b>
                                 </div>
                             </div>
                         </div>

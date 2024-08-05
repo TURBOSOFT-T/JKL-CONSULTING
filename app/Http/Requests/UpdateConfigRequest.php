@@ -38,6 +38,7 @@ class UpdateConfigRequest extends FormRequest
           //  'user_id' => auth()->user()->id,
            'image' => 'nullable|image|max:1024|mimes:jpg,jpeg,png',
            'icon' => 'nullable|image|max:1024|mimes:jpg,jpeg,png',
+           
            // 'category_id' => 'exists:categories,id',
         ];
     }

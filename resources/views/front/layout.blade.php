@@ -17,7 +17,7 @@
   
               @foreach($homes as $key => $home)
               <div class="carousel-item   {{$key == 0 ? 'active' : ''}}">
-                  <img class="w-100" {{-- src="/images/{{ $home->image }}" --}} src="{{ asset($home->getPath()) }}" alt="Image">
+                  <img class="w-100" {{-- src="/images/{{ $home->image }}" --}} src="{{ asset($home->getPath()) }}" width="700" height="800"   alt="Image">
                   <div class="carousel-caption">
                       <div class="container">
                           <div class="row justify-content-center">
@@ -428,8 +428,8 @@
                      </div>
                      <div>
                         <h4 class="tp-funfact-number"><i class="purecounter" data-purecounter-duration="1"
-                              data-purecounter-end="25">0</i></h4>
-                        <span>Years Experiences</span>
+                              data-purecounter-end="2">0</i></h4>
+                        <span>Expériences</span>
                      </div>
                   </div>
                </div>
