@@ -19,6 +19,18 @@ class Config extends Model
         'description',
         'frais',
         'icon',
+        'logo2',
+        'icon2',
+        'frais2',
+        'logoHeader2',
+        'telephone2',
+        'addresse2',
+        'email2',
+        'description2',
+        'frais2',
+        'icon3',
+        'logo3',
+        'icon3',
     ];
 
 

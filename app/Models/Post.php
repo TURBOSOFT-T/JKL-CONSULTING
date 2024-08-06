@@ -104,4 +104,11 @@ class Post extends Model
             $issue->id = Str::uuid(36);
         });
     } */
+
+
+    public function getPath()
+    {
+        $url = 'uploads/' . $this->image;
+        return $url;
+    }
 }

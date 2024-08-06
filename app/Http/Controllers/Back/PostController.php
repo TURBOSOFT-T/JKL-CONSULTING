@@ -10,6 +10,12 @@ use App\Models\{ Post, Category };
 use App\DataTables\PostsDataTable;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
+use App\Models\ {  Tag };
+use Illuminate\Support\Str;
+
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {
@@ -68,12 +74,65 @@ class PostController extends Controller
      * @param  \App\Repositories\PostRepository $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PostRequest $request, PostRepository $repository)
+    public function store1(PostRequest $request, PostRepository $repository)
     {
         $repository->store($request);
 
         return back()->with('ok', __('The post has been successfully created'));
     }
+    public function store(PostRequest $request, PostRepository $repository)
+    {
+        $user = Auth::user();
+
+
+    $input = $request->all();
+
+    if ($request->hasFile('image')) {
+
+        $file = $request->file('image');
+        $extension = $file->getClientOriginalExtension();
+        $filename = time() . '.' . $extension;
+        $file->move('public/Image/posts/', $filename);
+        $input['image'] = $filename;
+    }
+    $input['active'] = $request->has('active') ? 1 : 0;
+
+
+  $post=  $user->posts()->create($input);
+
+  //  $post = $request->user()->posts()->create($request->all());
+
+    $this->saveCategoriesAndTags($post, $request);
+
+
+        return back()->with('ok', __('The post has been successfully created'));
+    }
+
+
+    protected function saveCategoriesAndTags($post, $request)
+    {
+        // Categorie
+        $post->categories()->sync($request->categories);
+
+        // Tags
+        $tags_id = [];
+
+        if($request->tags) {
+            $tags = explode(',', $request->tags);
+            foreach ($tags as $tag) {
+                $tag_ref = Tag::firstOrCreate([
+                    'tag' => ucfirst($tag),
+                    'slug' => Str::slug($tag),
+                ]);
+                $tags_id[] = $tag_ref->id;
+            }
+        }
+
+        $post->tags()->sync($tags_id);
+    }
+
+   
+
 
     /**
      * Show the form for editing the specified post.

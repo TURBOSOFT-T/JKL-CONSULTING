@@ -78,6 +78,7 @@ class CategoriesDataTable extends DataTable
         return [
             Column::make('title')->title(__('Title')),
             Column::make('slug')->title(__('Slug')),
+          //  Column::make('description')->title(__('Descrition')),
             Column::computed('posts_count')->title(__('Posts'))->addClass('text-center align-middle'),
             Column::computed('action')->title(__('Action'))->addClass('align-middle text-center'),
         ];

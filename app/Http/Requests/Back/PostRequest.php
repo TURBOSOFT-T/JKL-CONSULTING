@@ -35,7 +35,7 @@ class PostRequest extends FormRequest
             'meta_description' => 'required|max:160',
             'meta_keywords' => 'required|regex:' . $regex,
             'seo_title' => 'required|max:60',
-            'image' => 'required|max:255',
+            'image' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
             'categories' => 'required',
             'tags' => 'nullable|regex:' . $regex,
         ];

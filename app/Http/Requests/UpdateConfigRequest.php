@@ -38,6 +38,18 @@ class UpdateConfigRequest extends FormRequest
           //  'user_id' => auth()->user()->id,
            'image' => 'nullable|image|max:1024|mimes:jpg,jpeg,png',
            'icon' => 'nullable|image|max:1024|mimes:jpg,jpeg,png',
+           // 'logoHeader' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoFooter' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoSideBar' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoTopBar' => 'sometimes|required|image|mimes:jpeg,png
+            // 'logoBottomBar' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoLeftBar' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoRightBar' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoHome' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoAbout' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoContact' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoServices' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif',
+           // 'logoTerms' => 'sometimes|required|image|mime
            
            // 'category_id' => 'exists:categories,id',
         ];

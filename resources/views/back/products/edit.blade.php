@@ -38,21 +38,7 @@
             </div>
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Original Price:</strong>
-                <input type="text" name="originalPrice" value="{{ $produit->originalPrice }}" class="form-control"
-                    placeholder="Original Price" required>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Discount Price:</strong>
-                <input type="text" name="discountPrice" value="{{ $produit->discountPrice}}" class="form-control"
-                    placeholder="Discount Price" required>
-            </div>
-        </div>
+       
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Slug:</strong>

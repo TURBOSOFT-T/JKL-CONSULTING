@@ -75,7 +75,7 @@
                               </div>
                            </div>
                            <div class="postbox__thumb mb-25">
-                              <img src="/assets/img/blog/blog-details-5.jpg" alt="">
+                              <img class="w-100" width="760" height="350" src="{{ url('public/Image/posts/' . $post->image) }}">
                            </div>
                            <div class="postbox__text mb-45">
                               <p class="mb-10">{{$post->description}}</p>

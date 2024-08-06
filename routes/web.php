@@ -39,7 +39,7 @@ use App\Http\Controllers\CartController;
 
 // Home
 Route::name('home')->get('/', [FrontPostController::class, 'index']);
-//Route::name('category')->get('category/{category:slug}', [FrontPostController::class, 'category']);
+Route::name('category')->get('category/{category:slug}', [FrontPostController::class, 'category']);
 Route::name('author')->get('author/{user}', [FrontPostController::class, 'user']);
 Route::name('tag')->get('tag/{tag:slug}', [FrontPostController::class, 'tag']);
 Route::name('page')->get('page/{page:slug}', FrontPageController::class);

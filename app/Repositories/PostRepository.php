@@ -185,6 +185,20 @@ class PostRepository
      */
     public function store($request)
     {
+
+
+         $input = $request->all();
+
+        if ($request->hasFile('image')) {
+
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads', $filename);
+            $input['image'] = $filename;
+          
+        } 
+
         $request->merge([
             'active' => $request->has('active'),
             'image' => basename($request->image),
