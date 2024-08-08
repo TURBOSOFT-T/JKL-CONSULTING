@@ -1,12 +1,12 @@
 @extends('front.fixe')
-@section('titre', "Contact")
+@section('titre', 'Contact')
 @section('body')
     <main>
-@php
+        @php
 
-$config = DB::table('configs')->first();
-$configs = DB::table('configs')->first();
-@endphp
+            $config = DB::table('configs')->first();
+            $configs = DB::table('configs')->first();
+        @endphp
 
         <!-- contact area start -->
         <div class="tp-contact-area tp-contact-2-style-2 tp-contact-style-3 tp-contact-inner-style p-relative fix">
@@ -54,7 +54,7 @@ $configs = DB::table('configs')->first();
                                     </span>
                                 </div>
                                 <div class="tp-contact-2-text my-auto small">
-                                        <b>{{ $config->email ?? '-' }}</b>
+                                    <b>{{ $config->email ?? '-' }}</b>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ $configs = DB::table('configs')->first();
                                     </span>
                                 </div>
                                 <div class="tp-contact-2-text my-auto small box ">
-                                        <b>{{ $configs->addresse ?? '-' }}</b>
+                                    <b>{{ $configs->addresse ?? '-' }}</b>
                                 </div>
                             </div>
                         </div>
@@ -96,14 +96,14 @@ $configs = DB::table('configs')->first();
                     </div>
                     <div class="col-xl-5 col-lg-6">
                         <div class="tp-contact-wrap">
-                            <h4 class="tp-contact-title">Request An Estimate</h4>
-                            <span>Make An Appointment</span>
+                            <h4 class="tp-contact-title">Nous contactez</h4>
+                            <span>Prendre un rendez-vous</span>
                             <form method="post" action="{{ route('contacts.store') }}">
                                 @csrf
                                 <div class="row gx-30">
-                                    <div class="col-md-6 mb-20">
+                                    <div class="col-md-12 mb-20">
                                         <div class="tp-contact-input-box p-relative">
-                                            <input name="nom" type="text" value="{{ old('nom') }}" required
+                                            <input name="name" type="text" value="{{ old('name') }}" required
                                                 placeholder="Votre nom">
                                             <span class="tp-contact-icon">
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -120,25 +120,7 @@ $configs = DB::table('configs')->first();
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-6 mb-20">
-                                        <div class="tp-contact-input-box p-relative">
-                                            <input name="telephone" type="number" value="{{ old('telephone') }}" required
-                                                placeholder="Votre numéro téléphone">
-                                            <span class="tp-contact-icon">
-                                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M15.5 11.0934L11.8211 9.44419L11.807 9.43794C11.5679 9.33485 11.3067 9.29334 11.0474 9.31723C10.7881 9.34111 10.5389 9.42962 10.3227 9.57466C10.2923 9.59495 10.2631 9.61686 10.2352 9.64028L8.49219 11.1247C7.47657 10.5739 6.42735 9.53325 5.87579 8.53013L7.36485 6.75981C7.38879 6.73124 7.41096 6.70124 7.43126 6.66997C7.57249 6.45447 7.65824 6.20738 7.68087 5.95071C7.70349 5.69405 7.6623 5.43577 7.56094 5.19888C7.55854 5.19434 7.55645 5.18964 7.55469 5.18481L5.90626 1.49966C5.77094 1.19147 5.54001 0.935038 5.24763 0.768305C4.95525 0.601571 4.61696 0.533399 4.28282 0.573876C3.14873 0.722855 2.10765 1.27956 1.35402 2.14001C0.600386 3.00047 0.185733 4.10583 0.187506 5.24966C0.187506 11.6254 5.37422 16.8122 11.75 16.8122C12.8938 16.8139 13.9992 16.3993 14.8597 15.6456C15.7201 14.892 16.2768 13.8509 16.4258 12.7168C16.4663 12.3827 16.3981 12.0444 16.2314 11.752C16.0646 11.4597 15.8082 11.2287 15.5 11.0934ZM11.75 14.9372C9.18167 14.9341 6.71942 13.9124 4.90333 12.0963C3.08725 10.2802 2.06561 7.81799 2.06251 5.24966C2.06072 4.60239 2.28046 3.97399 2.68522 3.46889C3.08999 2.96379 3.6554 2.61239 4.28751 2.47309L5.75782 5.75434L4.26094 7.53716C4.23675 7.56599 4.21431 7.59625 4.19376 7.62778C4.04622 7.85321 3.95947 8.11297 3.94195 8.38182C3.92443 8.65067 3.97672 8.91948 4.09376 9.16216C4.82969 10.6684 6.3461 12.1747 7.86797 12.9122C8.11227 13.028 8.38244 13.0784 8.65207 13.0586C8.9217 13.0387 9.18156 12.9492 9.40626 12.7989C9.43647 12.7785 9.46543 12.7563 9.49297 12.7325L11.2453 11.2426L14.5266 12.7122C14.3873 13.3443 14.0359 13.9097 13.5308 14.3144C13.0257 14.7192 12.3973 14.9389 11.75 14.9372Z"
-                                                        fill="currentcolor" />
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        @error('telephone')
-                                            <span class="small text-danger">
-                                                {{ $message }}
-                                            </span>
-                                        @enderror
-                                    </div>
+
                                     <div class="col-md-12 mb-20">
                                         <div class="tp-contact-input-box p-relative">
                                             <input name="email" type="email" value="{{ old('email') }}" required
@@ -158,65 +140,45 @@ $configs = DB::table('configs')->first();
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-12 mb-20">
-                                        <div class="tp-contact-input-box p-relative">
-                                            <input name="sujet" type="text" placeholder="Sujet" required>
-                                            <span class="tp-contact-icon">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M16.25 20L14.9131 19.3675C14.3793 19.1128 13.9282 18.7126 13.6118 18.2128C13.2955 17.713 13.1267 17.134 13.125 16.5425V12.5H19.375V16.5425C19.3736 17.1341 19.205 17.7132 18.8886 18.213C18.5722 18.7129 18.1209 19.1131 17.5869 19.3675L16.25 20ZM15.4481 18.2375L16.25 18.6169L17.0519 18.2375C17.3724 18.0849 17.6432 17.8448 17.833 17.5449C18.0229 17.2449 18.1241 16.8975 18.125 16.5425V13.75H14.375V16.5425C14.375 17.2638 14.7962 17.9294 15.4481 18.2375Z"
-                                                        fill="currentcolor" />
-                                                    <path
-                                                        d="M10.625 6.61625C10.3906 6.38181 10.0727 6.25007 9.74125 6.25H6.25C5.91848 6.25 5.60054 6.3817 5.36612 6.61612C5.1317 6.85054 5 7.16848 5 7.5V16.25C5 16.5815 5.1317 16.8995 5.36612 17.1339C5.60054 17.3683 5.91848 17.5 6.25 17.5H11.875V16.25H6.25V7.5H8.75V10C8.75 10.3315 8.8817 10.6495 9.11612 10.8839C9.35054 11.1183 9.66848 11.25 10 11.25H12.6825C13.1156 11.25 13.5025 10.9912 13.6681 10.5912C13.8338 10.1912 13.7431 9.735 13.4369 9.42812L10.625 6.61625ZM10 10V7.75875L12.2406 10H10Z"
-                                                        fill="currentcolor" />
-                                                    <path
-                                                        d="M17.5 3.75H10L7.86625 1.61625C7.63188 1.38181 7.31399 1.25007 6.9825 1.25H2.5C2.16848 1.25 1.85054 1.3817 1.61612 1.61612C1.3817 1.85054 1.25 2.16848 1.25 2.5V15C1.25 15.3315 1.3817 15.6495 1.61612 15.8839C1.85054 16.1183 2.16848 16.25 2.5 16.25H3.75V15H2.5V2.5H6.9825L9.4825 5H17.5V11.25H18.75V5C18.75 4.66848 18.6183 4.35054 18.3839 4.11612C18.1495 3.8817 17.8315 3.75 17.5 3.75Z"
-                                                        fill="currentcolor" />
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        @error('Sujet')
-                                            <span class="small text-danger">
-                                                {{ $message }}
-                                            </span>
-                                        @enderror
-                                    </div>
+
                                     <div class="col-md-12 mb-50">
                                         <div class="tp-contact-input-box p-relative">
-                                            <input name="message" type="text" required placeholder="Votre message">
-                                            <span class="tp-contact-icon">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18.3243 3.33341C18.3243 2.41675 17.5827 1.66675 16.666 1.66675H3.33268C2.41602 1.66675 1.66602 2.41675 1.66602 3.33341V13.3334C1.66602 14.2501 2.41602 15.0001 3.33268 15.0001H14.9993L18.3327 18.3334L18.3243 3.33341ZM16.666 3.33341V14.3084L15.691 13.3334H3.33268V3.33341H16.666ZM4.99935 10.0001H14.9993V11.6667H4.99935V10.0001ZM4.99935 7.50008H14.9993V9.16675H4.99935V7.50008ZM4.99935 5.00008H14.9993V6.66675H4.99935V5.00008Z"
-                                                        fill="currentcolor" />
-                                                </svg>
-                                            </span>
+                                            {{--  <textarea name="message" type="text" row="5" required placeholder="Votre message"> --}}
+
+                                                <textarea name="message" rows="12" cols="35">Laissez votre message.</textarea><br>
+
+                                                <span class="tp-contact-icon">
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M18.3243 3.33341C18.3243 2.41675 17.5827 1.66675 16.666 1.66675H3.33268C2.41602 1.66675 1.66602 2.41675 1.66602 3.33341V13.3334C1.66602 14.2501 2.41602 15.0001 3.33268 15.0001H14.9993L18.3327 18.3334L18.3243 3.33341ZM16.666 3.33341V14.3084L15.691 13.3334H3.33268V3.33341H16.666ZM4.99935 10.0001H14.9993V11.6667H4.99935V10.0001ZM4.99935 7.50008H14.9993V9.16675H4.99935V7.50008ZM4.99935 5.00008H14.9993V6.66675H4.99935V5.00008Z"
+                                                            fill="currentcolor" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            @error('message')
+        <span class="small text-danger">
+                                                        {{ $message }}
+                                                    </span>
+    @enderror
                                         </div>
-                                        @error('message')
-                                            <span class="small text-danger">
-                                                {{ $message }}
-                                            </span>
-                                        @enderror
                                     </div>
-                                </div>
-                                <button class="tp-btn-theme" type="submit">
-                                    <span>Envoyer</span>
-                                </button>
-                                <p class="ajax-response"></p>
-                            </form>
+                                    <button class="tp-btn-theme" type="submit">
+                                        <span>Envoyer</span>
+                                    </button>
+                                    <p class="ajax-response"></p>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- contact area end -->
+            <!-- contact area end -->
 
-<style>
-    .tp-contact-2-text{
-        height: 30px !important;
-    }
-</style>
-    </main>
+    <style>
+        .tp-contact-2-text{
+            height: 30px !important;
+        }
+    </style>
+        </main>
 @endsection

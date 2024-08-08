@@ -155,12 +155,45 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(PostRequest $request, PostRepository $repository, Post $post)
+    public function update(PostRequest $request, PostRepository $repository, $id)
     {
-        $repository->update($post, $request);
-
+        $user = Auth::user();
+        $post = $user->posts()->findOrFail($id);
+    
+        // Autoriser l'utilisateur à mettre à jour le post
+        $this->authorize('update', $post);
+    
+        $input = $request->all();
+    
+        if ($request->hasFile('image')) {
+            // Supprimez l'ancienne image si nécessaire
+            if ($post->image) {
+                $oldImagePath = storage_path('app/public/' . $post->image);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+    
+            // Téléchargez la nouvelle image
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move(storage_path('app/public/posts'), $filename);
+            $input['image'] = 'posts/' . $filename;
+        } else {
+            // Conserver l'ancienne image si aucune nouvelle image n'est téléchargée
+            $input['image'] = $post->image;
+        }
+    
+        // Convertir la valeur de 'active' en entier
+        $input['active'] = $request->has('active') ? 1 : 0;
+    
+        // Mettre à jour le post
+        $post->update($input);
+    
         return back()->with('ok', __('The post has been successfully updated'));
     }
+    
 
     /**
      * Remove the specified resource from storage.
