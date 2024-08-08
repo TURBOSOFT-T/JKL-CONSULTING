@@ -27,7 +27,7 @@
                                   </p>
                                   <h1 class="display-10 mb-10 text-white  animated slideInRight">
                                       {{$home->body}}</h1>
-                                  <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Explore More</a>
+                                  <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Voir plus</a>
                               </div>
                           </div>
                       </div>
