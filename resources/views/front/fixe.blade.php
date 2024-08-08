@@ -419,7 +419,7 @@
     </main>
    
     <footer>
-        <div class="tp-footer-bg tp-footer-overley" data-background="/assets/logo/logo_about.jpg">
+        <div class="tp-footer-bg tp-footer-overley" data-background="/assets/logo/piedpage2.jpg">
             <!-- footer area start -->
             <div class="tp-footer-area tp-footer-border pt-80 pb-10">
                 <div class="container">
