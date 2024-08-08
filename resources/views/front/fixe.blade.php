@@ -476,8 +476,9 @@
                                 <h4 class="tp-footer-widget-title">Nos liens</h4>
                                 <div class="tp-footer-widget-list">
                                     <ul>
-                                        <li><a href="/">Accueil</a></li>
-                                        <li><a href="/shop">Boutique</a></li>
+                                        @foreach($follows as $follow)
+                                        <li><a href="{{ $follow->href }}">{{ $follow->title }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
